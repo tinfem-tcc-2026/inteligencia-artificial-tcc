@@ -20,6 +20,9 @@
 \usepackage[flushmargin,hang,multiple,bottom]{footmisc}
 \usepackage{indentfirst}
 
+\settowidth{\thanksmarkwidth}{*}
+\setlength{\thanksmargin}{-\thanksmarkwidth}
+
 \setlength{\droptitle}{-3.5\baselineskip}
 
 $if(margens)$
