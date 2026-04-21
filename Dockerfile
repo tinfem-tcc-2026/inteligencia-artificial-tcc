@@ -2,11 +2,15 @@ FROM ubuntu:22.04 AS base
 
 ENV DEBIAN_FRONTEND=noninteractive
 
+RUN echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" \
+        | debconf-set-selections
+
 RUN apt update && apt -y install \
     texlive-publishers \
     texlive-latex-extra \
     texlive-xetex \
     fonts-liberation \
+    ttf-mscorefonts-installer \
     texlive-lang-spanish \
     texlive-lang-french \
     texlive-lang-portuguese \

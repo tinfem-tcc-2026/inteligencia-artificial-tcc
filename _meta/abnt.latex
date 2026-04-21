@@ -40,9 +40,7 @@ $endif$
 
 % fontes
 \defaultfontfeatures{Ligatures={TeX}}
-\setromanfont{Liberation Serif}
-\setsansfont{Liberation Sans}
-\setmonofont[Scale=MatchLowercase]{Liberation Serif}
+\setmainfont{Arial}
 \setlength{\emergencystretch}{3em}
 
 % ajuste do nome do autor
