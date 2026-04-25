@@ -15,7 +15,7 @@
     "corretor:ignorar": "cross-os corretor:ignorar:impl",
     "corretor:ignorar:impl": {
         "linux": "cspell --config _meta/cspell.json --words-only --unique \"**/*.md\" | sort --ignore-case >> ./_meta/dicts/whitelist.txt",
-        "win32": "cspell --config _meta/cspell.json --words-only --unique \"**/*.md\" | Sort-Object -Unique | Add-Content -Path ./_meta/dicts/whitelist.txt"
+        "win32": "cspell --config _meta/cspell.json --words-only --unique \"*/.md\" | sort /unique >> _meta/dicts/whitelist.txt"
     }
   },
   "devDependencies": {
