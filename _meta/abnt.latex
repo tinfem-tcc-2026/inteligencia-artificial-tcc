@@ -21,7 +21,7 @@
 \usepackage{indentfirst}
 
 \settowidth{\thanksmarkwidth}{*}
-\setlength{\thanksmargin}{-\thanksmarkwidth}
+\setlength{\thanksmargin}{0pt}
 
 \setlength{\droptitle}{-3.5\baselineskip}
 
