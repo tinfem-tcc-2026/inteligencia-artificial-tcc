@@ -5,9 +5,9 @@ autor:
     titulação: Estudante do Curso Técnico em Informática Integrado ao Ensino Médio do Instituto Federal do Paraná (IFPR) - Campus Londrina.
   - nome: Wellington dos Santos Duarte
     titulação: Estudante do Curso Técnico em Informática Integrado ao Ensino Médio do Instituto Federal do Paraná (IFPR) - Campus Londrina.
-  - nome: André Pire do Prado
+  - nome: "Orientador: Prof. Dr. André Pire do Prado"
     titulação: Professor Orientador do Instituto Federal do Paraná (IFPR) - Campus Londrina.
-  - nome: Marlon Silvestre Kierecz
+  - nome: "Coorientador: Prof. Dr. Marlon Silvestre Kierecz"
     titulação: Professor Coorientador do Instituto Federal do Paraná (IFPR) - Campus Londrina.
 
 resumo: ""
