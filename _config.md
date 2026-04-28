@@ -1,5 +1,5 @@
 ---
-título: Título do Artigo
+título: "Inteligência Artificial: Conceituação, Categorias e Aplicabilidade"
 autor:
   - nome: Lucas Santi Leite
     titulação: Estudante do Curso Técnico em Informática Integrado ao Ensino Médio do Instituto Federal do Paraná (IFPR) - Campus Londrina.
