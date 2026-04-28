@@ -20,8 +20,7 @@
 \usepackage[flushmargin,hang,multiple,bottom]{footmisc}
 \usepackage{indentfirst}
 
-\settowidth{\thanksmarkwidth}{*}
-\setlength{\thanksmargin}{0pt}
+\urlstyle{same}
 
 \setlength{\droptitle}{-3.5\baselineskip}
 
@@ -49,11 +48,11 @@ $endif$
 
 % ajuste dos títulos
 \titleformat{\section}
-{\singlespacing\normalfont\normalsize\sffamily\bfseries\raggedright\uppercase}{\thesection}{0.5em}{}
+{\singlespacing\normalsize\bfseries\raggedright\uppercase}{\thesection}{0.5em}{}
 \titleformat{\subsection}
-{\singlespacing\normalfont\normalsize\sffamily\raggedright\uppercase}{\thesubsection}{0.5em}{}
+{\singlespacing\normalsize\raggedright\uppercase}{\thesubsection}{0.5em}{}
 \titleformat{\subsubsection}
-{\singlespacing\normalfont\normalsize\sffamily\raggedright\uppercase}{\thesubsubsection}{0.5em}{}
+{\singlespacing\normalsize\raggedright\uppercase}{\thesubsubsection}{0.5em}{}
 
 % ajuste da numeração das páginas
 \pagestyle{fancy}
@@ -74,11 +73,6 @@ $endif$
     skip=5pt
 }
 \newcommand{\legend}{\center\small\vspace{-8pt}}
-
-% ajuste das notas de \thanks
-\makeatletter
-\let\@fnsymbol\@arabic
-\makeatother
 
 % ajuste das imagens (ajuste de escala)
 \makeatletter
@@ -108,14 +102,42 @@ $endif$
 \setlength{\footnotemargin}{0.8em}
 \renewcommand{\footnoterule}{
     \kern 18pt
-    \hrule width 3cm
+    \hrule width 5cm
     \kern 6pt
 }
-\setlength{\footnotesep}{5mm}
+\setlength{\footnotesep}{0.8em}
+
+% ajuste das notas de thanks
+\makeatletter
+\let\@fnsymbol\@arabic
+\renewcommand{\makethanksmark}{%
+    \setbox\@tempboxa\hbox{%
+    \ifdim\footnotemargin>0pt
+        \hb@xt@\footnotemargin{\thanksfootmark\hss}%
+    \else
+        \thanksfootmark
+    \fi
+    }%
+    \leftmargin\wd\@tempboxa
+    \rightmargin\z@
+    \linewidth \columnwidth
+    \advance \linewidth -\leftmargin
+    \parshape \@ne \leftmargin \linewidth
+    \footnotesize
+    \@setpar{{\@@par}}
+    \leavevmode
+    \llap{\box\@tempboxa}%
+    \parskip\hangfootparskip\relax
+    \parindent\hangfootparindent\relax
+}
+\makeatother
+\renewcommand{\thanksfootmark}{%
+    {\normalfont\thanksscript{\thanksfootpre\tamark\thanksfootpost}}
+}
 
 % formatação das referências
 \newcommand{\referencestitle}{
-    \singlespacing\normalfont\large\sffamily\bfseries\center\uppercase
+    \singlespacing\bfseries\center\uppercase
 }
 \newenvironment{cslreferences}
 
@@ -170,7 +192,7 @@ $endif$
     $if(resumo)$
        \begingroup % corrige inconsistência nos espaçamentos verticais
        \titleformat{\section}
-       {\singlespacing\normalfont\normalsize\sffamily\bfseries\uppercase}{\thesection}{0.5em}{}
+       {\singlespacing\normalsize\bfseries\uppercase}{\thesection}{0.5em}{}
        \section*{Resumo}
        \endgroup
        \begin{abstract}
@@ -187,7 +209,7 @@ $endif$
     $if(abstract)$
        \begingroup % corrige inconsistência nos espaçamentos verticais
        \titleformat{\section}
-       {\singlespacing\normalfont\normalsize\sffamily\bfseries\uppercase}{\thesection}{0.5em}{}
+       {\singlespacing\normalsize\bfseries\uppercase}{\thesection}{0.5em}{}
        \section*{Abstract}
        \endgroup
        \begin{abstract}
@@ -211,7 +233,7 @@ $endif$
        \begingroup
        \vspace{-12pt}
        \titleformat{\section}
-       {\singlespacing\normalfont\Large\sffamily\bfseries\center}{\thesection}{0.5em}{}
+       {\singlespacing\Large\bfseries\center}{\thesection}{0.5em}{}
        \section*{Agradecimentos\label{agradecimentos}}
        \addcontentsline{toc}{section}{Agradecimentos}
        \endgroup
