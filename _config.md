@@ -2,13 +2,13 @@
 título: Título do Artigo
 autor:
   - nome: Lucas Santi Leite
-    titulação: Estudante do Curso Técnico em Informática Integrado ao Ensino Médio do Instituto Federal do Paraná (IFPR), Campus Londrina.
+    titulação: Estudante do Curso Técnico em Informática Integrado ao Ensino Médio do Instituto Federal do Paraná (IFPR) - Campus Londrina.
   - nome: Wellington dos Santos Duarte
-    titulação: Estudante do Curso Técnico em Informática Integrado ao Ensino Médio do Instituto Federal do Paraná (IFPR), Campus Londrina.
+    titulação: Estudante do Curso Técnico em Informática Integrado ao Ensino Médio do Instituto Federal do Paraná (IFPR) - Campus Londrina.
   - nome: André Pire do Prado
-    titulação: Professor Orientador do Instituto Federal do Paraná (IFPR), Campus Londrina.
+    titulação: Professor Orientador do Instituto Federal do Paraná (IFPR) - Campus Londrina.
   - nome: Marlon Silvestre Kierecz
-    titulação: Professor Co-orientador do Instituto Federal do Paraná (IFPR), Campus Londrina.
+    titulação: Professor Coorientador do Instituto Federal do Paraná (IFPR) - Campus Londrina.
 
 resumo: ""
 palavras-chave: ""
