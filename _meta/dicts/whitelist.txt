@@ -22,3 +22,6 @@ Machinery
 Mathison
 Nakabayashi
 Turing
+computing
+intelligence
+turing
