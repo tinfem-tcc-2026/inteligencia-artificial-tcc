@@ -241,30 +241,29 @@ autores, exceto em arquivos do tipo 'artigo de jornal, artigo de revista, artigo
     <choose>
       <if match="any" variable="publisher-place publisher">
         <choose>
-          <if variable="publisher-place">
-            <text variable="publisher-place" suffix=": "/>
-          </if>
-          <else-if type="entry-encyclopedia"/>
-          <else>
-            <text value="[S.l.]" suffix=": " font-style="italic"/>
-          </else>
-        </choose>
-        <choose>
           <if variable="note">
             <text variable="note" suffix=", "/>
-            <text macro="issued"/>
           </if>
           <else-if variable="publisher">
             <text variable="publisher" suffix=", "/>
-            <text macro="issued"/>
           </else-if>
           <else>
             <text value="[S.n.]" font-style="italic"/>
           </else>
         </choose>
+        <choose>
+          <if variable="publisher-place">
+            <text variable="publisher-place"/>
+          </if>
+          <else-if type="entry-encyclopedia"/>
+          <else>
+            <text value="[S.l.]" font-style="italic"/>
+          </else>
+        </choose>
+        <text macro="issued" prefix=", " />
       </if>
       <else>
-        <text value="[S.l.: S.n.]" font-style="italic"/>
+        <text value="[S.n., S.l.]" font-style="italic"/>
       </else>
     </choose>
   </macro>
@@ -374,6 +373,7 @@ em caixa alta. Utiliza-se antes do nome da conferencia a expressao "In". Segundo
           <group delimiter=", ">
             <text variable="volume" prefix=" v. "/>
             <text variable="issue" prefix=" n. "/>
+            <text variable="note" />
           </group>
           <text variable="page" prefix="p. "/>
         </group>
@@ -541,7 +541,7 @@ em caixa alta. Utiliza-se antes do nome da conferencia a expressao "In". Segundo
             <!--Autor-->
             <text macro="title" suffix=". "/>
             <!--Titulo-->
-            <text macro="genre" suffix="&#8212;"/>
+            <text macro="genre" suffix=" - "/>
             <!--Tipo-->
             <text macro="publisher" suffix="."/>
             <!--Local, data, etc-->
